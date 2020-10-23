@@ -1,23 +1,13 @@
 import React from "react";
 import { Map, Marker, TileLayer } from 'react-leaflet';
-import L from 'leaflet';
 
 import { FiPlus } from "react-icons/fi";
-
-import MapMarker from '../assets/images/map-marker.svg';
 
 import Sidebar from '../components/Sidebar'
 
 import '../styles/screens/create-orphanage.css';
 
-
-const happyMapIcon = L.icon({
-  iconUrl: MapMarker,
-
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [0, -60]
-})
+import mapIcon from "../utils/mapMarker";
 
 export default function CreateOrphanage() {
 
@@ -39,7 +29,7 @@ export default function CreateOrphanage() {
                 url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
               />
 
-              <Marker interactive={false} icon={happyMapIcon} position={[-27.2092052,-49.6401092]} />
+              <Marker interactive={false} icon={mapIcon} position={[-27.2092052,-49.6401092]} />
             </Map>
 
             <div className="input-block">
