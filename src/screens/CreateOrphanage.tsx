@@ -5,12 +5,12 @@ import { useHistory } from "react-router-dom";
 
 import { FiArrowLeft, FiPlus } from "react-icons/fi";
 
-import mapMarkerImg from '../images/map-marker.svg';
+import MapMarker from '../assets/images/map-marker.svg';
 
-import '../styles/pages/create-orphanage.css';
+import '../styles/screens/create-orphanage.css';
 
 const happyMapIcon = L.icon({
-  iconUrl: mapMarkerImg,
+  iconUrl: MapMarker,
 
   iconSize: [58, 68],
   iconAnchor: [29, 68],
@@ -23,7 +23,7 @@ export default function CreateOrphanage() {
   return (
     <div id="page-create-orphanage">
       <aside>
-        <img src={mapMarkerImg} alt="Happy" />
+        <img src={MapMarker} alt="Happy" />
 
         <footer>
           <button type="button" onClick={goBack}>

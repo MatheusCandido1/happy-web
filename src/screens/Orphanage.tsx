@@ -5,12 +5,12 @@ import { Map, Marker, TileLayer } from "react-leaflet";
 import { useHistory } from 'react-router-dom';
 import L from 'leaflet';
 
-import mapMarkerImg from '../images/map-marker.svg';
+import MapMarker from '../assets/images/map-marker.svg';
 
-import '../styles/pages/orphanage.css';
+import '../styles/screens/orphanage.css';
 
 const happyMapIcon = L.icon({
-  iconUrl: mapMarkerImg,
+  iconUrl: MapMarker,
 
   iconSize: [58, 68],
   iconAnchor: [29, 68],
@@ -23,7 +23,7 @@ export default function Orphanage() {
   return (
     <div id="page-orphanage">
       <aside>
-        <img src={mapMarkerImg} alt="Happy" />
+        <img src={MapMarker} alt="Happy" />
 
         <footer>
           <button type="button" onClick={goBack}>
